@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Member {
@@ -23,10 +23,6 @@ export class Member {
     @CreateDateColumn()
     updated_at: Date;
 
-    @Column({
-        type: 'timestamp',
-        nullable: true,
-        default: null
-    })
+    @DeleteDateColumn()
     deleted_at: Date;
 }

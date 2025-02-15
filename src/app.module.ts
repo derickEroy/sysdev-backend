@@ -5,14 +5,14 @@ import { AppService } from './app.service';
 import { pgOptions } from './configs/pg.config';
 import { MembersModule } from './members/members.module';
 import { ProjectsModule } from './projects/projects.module';
-import { MemberProjectsModule } from './member_projects/member_projects.module';
+import { MemberProjectModule } from './member_project/member_project.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(pgOptions),
     MembersModule,
     ProjectsModule,
-    MemberProjectsModule
+    MemberProjectModule
   ],
   controllers: [
     AppController
